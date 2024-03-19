@@ -8,7 +8,7 @@
 
 (provide (all-defined-out))
 
-(define INSET  5)     ;; the space around the image in the canvas
+(define INSET  0)     ;; the space around the image in the canvas
 (define RATE   1/30)   ;; the clock tick rate 
 (define TRIES  3)     ;; how many times should register try to connect to the server 
 (define PAUSE  1/2)     ;; # secs to wait between attempts to connect to server 

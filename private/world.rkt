@@ -256,10 +256,11 @@
                (stretchable-width #f)
                (stretchable-height #f)
                (style '(no-hscroll no-vscroll))
+               ; INSET is zero. TODO: make it a parameter
                (horizontal-inset INSET)
                (vertical-inset INSET)))
-        (send editor-canvas min-client-width (+ width INSET INSET))
-        (send editor-canvas min-client-height (+ height INSET INSET))
+        (send editor-canvas min-client-width (sub1 (+ width INSET INSET)))
+        (send editor-canvas min-client-height (sub1 (+ height INSET INSET)))
         (set!-values (enable-images-button disable-images-button)
                      (inner (values void void) create-frame/universe frame play-back:cust))
         (send editor-canvas focus)
